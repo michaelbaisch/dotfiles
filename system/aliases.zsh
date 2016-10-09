@@ -8,3 +8,12 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+# Basic directory operations
+alias ..='cd ../'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Diff
+#   Arguments only work with a function 
+alias diffFolder='function _diffFolder(){ diff -qr $1 $2 | grep -v -e 'DS_Store' -e 'Thumbs' };_diffFolder'
