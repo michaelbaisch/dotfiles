@@ -1,0 +1,7 @@
+{
+  "cmd": ["ruby", "$file"],
+  "env": {
+    "LANG": "en_US.UTF-8",
+    "LC_CTYPE": "UTF-8"
+  },
+}
