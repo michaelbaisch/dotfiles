@@ -67,6 +67,34 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
+## Setup
+
+1. Install Xcode
+2. Install dotfiles
+```sh
+git clone https://github.com/michaelbaisch/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+git checkout mine
+script/bootstrap
+```
+3. Setup ZSH `chsh -s $(which zsh)`
+4. Run `dot`. Setup Sublime when prompted.
+4.5. There is a bug with `brew bundle`, so it exits after running. It needs to be commented for the second run in `script/install`. See [issue here](https://github.com/holman/dotfiles/issues/242). Then run:
+```sh
+./script/install
+```
+5. Quit and open Terminal
+6. Copy ssh aliases and keys
+7. Setup all the apps
+
+## Other notes:
+
+### Sublime packages:
+- CoffeeAngular Syntax
+- MasmAssembly
+- SublimeHighlight
+- Sync View Scroll (not very snappy)
+
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should

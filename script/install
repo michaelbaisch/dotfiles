@@ -11,7 +11,8 @@ echo "› brew bundle"
 brew bundle
 
 # Sublime 3
-echo "Open Sublime. Tools -> Install Package Control. Shift + cmd + p -> 'install' and install the 'Glacier' theme"
+echo "> Now open Sublime. Tools -> Install Package Control. Shift + cmd + p -> 'install' and install the 'Glacier' theme. Quit Sublime"
+echo "> Press enter when done."
 read enter
 
 # find the installers and run them iteratively
