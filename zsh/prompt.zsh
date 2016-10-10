@@ -133,6 +133,6 @@ set_prompt () {
 }
 
 precmd() {
-  title "zsh" "%m" "%55<...<%~"
+  title "zsh" "%n@%m" "%55<...<%~"
   set_prompt
 }
