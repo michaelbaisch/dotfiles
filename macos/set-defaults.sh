@@ -184,13 +184,13 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 17
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
 defaults write NSGlobalDomain AppleLanguages -array "en" "de"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
@@ -353,11 +353,14 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 16
 
+# Set dock magnification
+defaults write com.apple.dock magnification -flaot 1.0
+
 # Change minimize/maximize window effect
-defaults write com.apple.dock mineffect -string "scale"
+defaults write com.apple.dock mineffect -string "genie"
 
 # Minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool true
+#defaults write com.apple.dock minimize-to-application -bool true
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -869,7 +872,7 @@ defaults write com.divisiblebyzero.Spectacle MoveToBottomHalf - data 62706c69737
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
   "Dock" "Finder" "Google Chrome" "Google Chrome Canary" "Mail" "Messages" \
-  "Opera" "Photos" "Safari" "SizeUp" "Spectacle" "SystemUIServer" "Terminal" \
+  "Opera" "Photos" "Safari" "SizeUp" "Spectacle" "SystemUIServer" \
   "Transmission" "Tweetbot" "Twitter" "iCal"; do
   killall "${app}" &> /dev/null
 done
