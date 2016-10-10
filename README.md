@@ -71,18 +71,23 @@ this script in `bin/`.
 
 1. Install Xcode
 2. Install dotfiles
-```sh
-git clone https://github.com/michaelbaisch/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-git checkout mine
-script/bootstrap
-```
+
+    ```sh
+    git clone https://github.com/michaelbaisch/dotfiles.git ~/.dotfiles
+    cd ~/.dotfiles
+    git checkout mine
+    script/bootstrap
+    ```
+
 3. Setup ZSH `chsh -s $(which zsh)`
 4. Run `dot`. Setup Sublime when prompted.
-4.5. There is a bug with `brew bundle`, so it exits after running. It needs to be commented for the second run in `script/install`. See [issue here](https://github.com/holman/dotfiles/issues/242). Then run:
-```sh
-./script/install
-```
+
+    4.5. There is a bug with `brew bundle`, so it exits after running. It needs to be commented for the second run in `script/install`. See [issue here](https://github.com/holman/dotfiles/issues/242). Then run:
+
+    ```sh
+    ./script/install
+    ```
+
 5. Quit and open Terminal
 6. Copy ssh aliases and keys
 7. Setup all the apps
