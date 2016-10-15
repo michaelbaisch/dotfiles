@@ -28,7 +28,7 @@ brew 'yarn'
 brew 'youtube-dl'
 
 cask '1password'
-#cask 'adium'
+cask 'adium'
 #cask 'atom'
 cask 'firefox'
 #cask 'garmin-express'                   # Manage GPS devices
@@ -55,6 +55,7 @@ cask 'chromium'
 cask 'forklift'
 cask 'bino'
 cask 'evernote'
+#cask 'goSerial'  # not available
 cask 'GrandPerspective'
 cask 'Hex-Fiend'
 cask 'hopper-disassembler'
@@ -65,8 +66,8 @@ cask 'MoneyMoney'
 cask 'Mou'
 cask 'MPlayerX'
 #cask 'Pleasant3D'  # not available
-cask 'plex-media-server'                  # Want this really?
-cask 'plex-media-player'
+#cask 'plex-media-server'                  # Want this really?
+cask 'plex-home-theater'                  # 'plex-media-player' 
 cask 'prefs-editor'
 cask 'resilio-sync'
 cask 'Slic3r'
