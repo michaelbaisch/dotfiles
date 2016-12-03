@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# This scirpt will download the given URL on the server
+# It'll first open a new tmux window and uses aria2c to download the file
+
+# Import ssh aliases 
+shopt -s expand_aliases
+source ~/.dotfiles/ssh/aliases.zsh
+
+if [ $# > 0 ]; then 
+  echo "Connecting to server and starting download..."
+  ssh_command="tmux new-window -t download aria2c $1"
+  serverStuff $ssh_command
+fi
