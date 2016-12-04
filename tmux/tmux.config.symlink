@@ -1,0 +1,8 @@
+### command prefix
+unbind C-b
+set-option -g prefix C-y
+
+
+unbind %
+bind | split-window -h
+bind - split-window -v
