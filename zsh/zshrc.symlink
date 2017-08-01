@@ -1,3 +1,8 @@
+# Use UTF-8 everywhere 
+#'$ locale' to have a look, by default "LC_ALL" was empty on macOS
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
