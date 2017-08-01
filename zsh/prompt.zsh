@@ -88,43 +88,33 @@ git_prompt_info () {
  echo "${ref#refs/heads/}"
 }
 
-unpushed () {
-  $git cherry -v @{upstream} 2>/dev/null
-}
-
+# This assumes that you always have an origin named `origin`, and that you only
+# care about one specific origin. If this is not the case, you might want to use
+# `$git cherry -v @{upstream}` instead.
 need_push () {
-  if [[ $(unpushed) == "" ]]
+  if [ $($git rev-parse --is-inside-work-tree 2>/dev/null) ]
   then
-    echo " "
-  else
-    echo " with %{$fg_bold[black]%}unpushed%{$reset_color%} "
-  fi
-}
+    number=$($git cherry -v origin/$(git symbolic-ref --short HEAD) 2>/dev/null | wc -l | bc)
 
-ruby_version() {
-  if (( $+commands[rbenv] ))
-  then
-    echo "$(rbenv version | awk '{print $1}')"
-  fi
-
-  if (( $+commands[rvm-prompt] ))
-  then
-    echo "$(rvm-prompt | awk '{print $1}')"
-  fi
-}
-
-rb_prompt() {
-  if ! [[ -z "$(ruby_version)" ]]
-  then
-    echo "%{$fg_bold[yellow]%}$(ruby_version)%{$reset_color%} "
-  else
-    echo ""
+    if [[ $number == 0 ]]
+    then
+      echo " "
+    else
+      echo " with %{$fg_bold[magenta]%}$number unpushed%{$reset_color%}"
+    fi
   fi
 }
 
 directory_name() {
   #echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
   echo "%{$fg_bold[cyan]%}%~%\/%{$reset_color%}"
+}
+
+battery_status() {
+  if [[ $(sysctl -n hw.model) == *"Book"* ]]
+  then
+    $ZSH/bin/battery-status
+  fi
 }
 
 export PROMPT=$'\n$(directory_name) $(git_dirty)\n› '
