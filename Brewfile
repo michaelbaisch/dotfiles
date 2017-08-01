@@ -3,6 +3,8 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 tap 'puma/puma'
 
+brew 'git'
+brew 'git subrepo'
 brew 'ack'                              # grep for programmers
 brew 'coreutils'
 #brew 'go'
@@ -86,4 +88,4 @@ cask 'betterzipql'
 cask 'qlimagesize'
 cask 'webpquicklook'
 cask 'suspicious-package'
-
+cask 'qlvideo'
