@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'puma/puma'
+tap 'caskroom/fonts'
 
 brew 'git'
 brew 'git subrepo'
@@ -28,6 +29,10 @@ brew 'unrar'
 brew 'wget'
 brew 'yarn'
 brew 'youtube-dl'
+
+# Fonts
+# Monospaced fonts with ligatures: Fira Code, Monoid, and Hasklig
+cask 'font-fira-code'
 
 cask '1password'
 cask 'adium'
