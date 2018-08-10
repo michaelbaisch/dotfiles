@@ -100,6 +100,42 @@ this script in `bin/`.
 - SublimeHighlight
 - Sync View Scroll (not very snappy)
 
+
+### Migrate from Backup
+
+#### iMessage
+
+* `~/Library/Messages`
+
+
+#### Mail
+
+* `~/Library/Mail/`
+* `~/Library/Accounts/`
+* `~/Library/Preferences/com.apple.mail-shared.plist`
+* `~/Library/Preferences/com.apple.mail.plist`
+* `~/Library/Containers/com.apple.mail/`
+
+
+#### Tunnelblick
+
+* `/Library/Application Support/Tunnelblick/`
+* `/Library/Application Support/Tunnelblick/`
+* `~/Library/Preferences/net.tunnelblick.tunnelblick.plist`
+
+```bash
+sudo chown -R root:wheel /Library/Application\ Support/Tunnelblick/
+```
+
+
+#### iTunes
+
+* `~/Library/Application Support/MobileSync/`
+* `~/Music/iTunes/`
+* (`~/Library/iTunes/`)
+* (`~/Library/Prefernces/`)
+
+
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should
