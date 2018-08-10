@@ -54,7 +54,7 @@ cask 'dash'
 cask 'sequel-pro'
 cask 'alfred'
 cask 'spectacle'
-cask 'dropbox'
+#cask 'dropbox'
 cask 'sketch'
 cask 'imageoptim'
 cask 'CocoaPacketAnalyzer'
@@ -82,6 +82,7 @@ cask 'sparkleshare'
 cask 'sublime-text'
 cask 'teleport'   # Needs to be copied manually
 cask 'GPG-Suite'
+cask 'tunnelblick'
 
 # Quicklook
 cask 'qlcolorcode' 
