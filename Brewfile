@@ -2,7 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'puma/puma'
-tap 'caskroom/fonts'
+tap 'homebrew/cask-fonts'
 
 brew 'git'
 brew 'git-subrepo'
@@ -29,6 +29,7 @@ brew 'unrar'
 brew 'wget'
 brew 'yarn'
 brew 'youtube-dl'
+brew 'syncthing', start_service: true
 
 # Fonts
 # Monospaced fonts with ligatures: Fira Code, Monoid, and Hasklig
@@ -44,6 +45,7 @@ cask 'handbrake'
 #cask 'mapbox-studio'                    # Design custom maps that fit seamlessly in your application.
 #cask 'seashore'                         # image editor
 cask 'slack'
+cask 'mattermost'
 cask 'steam'
 cask 'transmission'
 #cask 'tunnelbear'                         # VPN
@@ -57,16 +59,17 @@ cask 'spectacle'
 #cask 'dropbox'
 cask 'sketch'
 cask 'imageoptim'
-cask 'CocoaPacketAnalyzer'
+#cask 'CocoaPacketAnalyzer' # not available
 cask 'chromium'
+cask 'brave-browser'
 cask 'forklift'
 cask 'bino'
 cask 'evernote'
 #cask 'goSerial'  # not available
 cask 'GrandPerspective'
 cask 'Hex-Fiend'
-cask 'hopper-disassembler'
-cask 'istat-menus'
+#cask 'hopper-disassembler' # not available
+#cask 'istat-menus' # not available
 cask 'little-snitch'
 cask 'MAMP'
 cask 'MoneyMoney'
@@ -76,11 +79,11 @@ cask 'MPlayerX'
 #cask 'plex-media-server'                  # Want this really?
 #cask 'plex-home-theater'                  # 'plex-media-player' 
 cask 'prefs-editor'
-cask 'resilio-sync'
+cask 'syncthing'
 cask 'Slic3r'
 cask 'sparkleshare'
 cask 'sublime-text'
-cask 'teleport'   # Needs to be copied manually
+#cask 'teleport'   # not available
 cask 'GPG-Suite'
 cask 'tunnelblick'
 
@@ -96,3 +99,4 @@ cask 'qlimagesize'
 cask 'webpquicklook'
 cask 'suspicious-package'
 cask 'qlvideo'
+
