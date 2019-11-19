@@ -103,6 +103,20 @@ this script in `bin/`.
 
 ### Migrate from Backup
 
+#### Syncthing
+
+```sh
+brew services list
+brew services stop syncthing
+```
+
+* `~/Library/Application Support/Syncthing`
+
+```sh
+brew services start syncthing
+```
+
+
 #### iMessage
 
 * `~/Library/Messages`
